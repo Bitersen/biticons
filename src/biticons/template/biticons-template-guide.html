@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BitIcons guide</title>
+  <link href="biticons.css" rel="stylesheet" />
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; }
+    body { font-size: 14px; font-family: Arial, Helvetica, sans-serif; line-height: 1.61; }
+    h1, h2 { padding: 0; margin: 0; font-weight: normal; }
+    h1 { font-size: 45px; }
+    h2 { font-size: 35px; }
+    h3 { margin: 0 0 20px 0; font-weight: normal; font-size: 25px; }
+    p { margin: 0 0 20px 0; }
+    a { text-decoration: none; color: crimson; }
+    code { font-family: monospace; padding: 10px 20px; font-size: 16px; background-color: #DDD; border-radius: 3px 3px 0 0; }
+    .wrap { display: block; max-width: 1000px; margin: 20px auto; padding: 10px; }
+    .icons__all { display: flex; align-items: flex-start; flex-wrap: wrap; flex-direction: row; width: 100%; margin: 0 0 50px 0; }
+    .icons__all a { text-decoration: none; color: black; background: white; cursor: default; padding: 5px 10px 0 10px; margin: 0 5px 5px 0; border: 1px solid #CCC; transition: all 0.3s ease; border-radius: 3px; }
+    .icons__all a:hover { color: white; background: black; transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0); }
+    .icons__all .icon { font-size: 16px; }
+    .size16 { font-size: 16px; }
+    .size24 { font-size: 24px; }
+    .size32 { font-size: 32px; }
+    .size64 { font-size: 64px; }
+    .icons__individual { display: flex; margin: 0 0 30px 0; padding: 10px; flex-direction: column; border: 1px solid #DDD; border-radius: 3px; }
+    .example { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; }
+    .example .icon { padding: 10px; margin: 0 10px 10px 0; color: black; background: white; transition: all 0.3s ease; border-radius: 3px; }
+    .example .icon:hover { color: white; background: black; transition: all 0.3s ease; }
+    .back-to-top { display: block; padding: 5px 10px; background-color: #CCC; text-decoration: none; color: black; text-align: right; border-radius: 0 0 3px 3px; }
+    .icon {line-height: 1 !important;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+<h1 id="all-generated-icons">Biticons</h1>
+<hr>
+<p>This is guide for all generated Biticons. If you want to know how to draw your own icons, please visit <a href="https://github.com/Bitersen/biticons">Biticons repository</a> on GitHub.</p>
+<div class="icons__all">
+<% _.each(glyphs, function(glyph) { %>
+  <a href="#icon__<%= glyph.fileName %>" alt=".icon-<%= glyph.fileName %>" title=".icon-<%= glyph.fileName %>">
+    <span class="icon icon-<%= glyph.fileName %>"></span>
+  </a>
+<% }); %>
+</div>
+
+<% _.each(glyphs, function(glyph) { %>
+<div class="icons__individual" id="icon__<%= glyph.fileName %>">
+  <h3>icon-<%= glyph.fileName %></h3>
+  <div class="example">
+    <span class="icon size16 icon-<%= glyph.fileName %>" alt="Size 16px" title="Size 16px"></span>
+    <span class="icon size24 icon-<%= glyph.fileName %>" alt="Size 24px" title="Size 24px"></span>
+    <span class="icon size32 icon-<%= glyph.fileName %>" alt="Size 32px" title="Size 32px"></span>
+    <span class="icon size64 icon-<%= glyph.fileName %>" alt="Size 64px" title="Size 64px"></span>
+  </div>
+  <p>
+    Unicode: <b><%= glyph.codePoint %></b>
+  </p>
+  <code>
+    <pre>&lt;span class="icon icon-<%= glyph.fileName %>"&gt;&lt;/span&gt;</pre>
+  </code>
+
+  <a href="#all-generated-icons" class="back-to-top">Back to top</a>
+</div>
+<% }); %>
+<div class="credits">Biticons are part of Bitframe, front-end framework by <a href="https://www.bitersen.com">Vladimir Jovanović</a></div>
+</div>
+</body>
+</html>

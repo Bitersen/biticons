@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// Unicode function to preserve formatting
+@function unicode($str) {
+  @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
+}
+
+// Include this file in your main SCSS file, so that you can extend icon names
+%icon {
+  font-family: "<%= fontName %>";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+  cursor: default;
+}
+
+@function icon-char($filename) {
+  $char: "";
+  <% _.each(glyphs, function(glyph) { %>
+    @if $filename == <%= glyph.fileName %> {
+        $char: unicode(<%= glyph.codePoint %>);
+    }<% }); %>
+  @return $char;
+}
+
+@mixin icon($filename, $insert: before) {
+  &:#{$insert} {
+    @extend %icon;
+    content: icon-char($filename);
+  }
+}
+
+// Icon Glyphs
+<% _.each(glyphs, function(glyph) { %>
+%icon-<%= glyph.fileName %> {
+  @include icon(<%= glyph.fileName %>);
+}
+<% }); %>

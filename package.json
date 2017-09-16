@@ -1,0 +1,41 @@
+{
+  "name": "bitersen-biticons",
+  "version": "3.0.0",
+  "description": "Bitersen Icon-font generator",
+  "dependencies": {},
+  "devDependencies": {
+    "cli-color": "^1.2.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-header": "^1.8.9",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-iconfont": "^9.0.1",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-plumber-notifier": "0.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-resolver": "^0.2.0",
+    "gulp-sass": "^3.1.0",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^2.1.0",
+    "time-stamp": "^2.0.0"
+  },
+  "repository": {
+    "url": "git+https://github.com/Bitersen/biticons.git",
+    "type": "git"
+  },
+  "private": true,
+  "homepage": "https://github.com/Bitersen/biticons.git",
+  "main": "gulpfile.js",
+  "scripts": {
+    "install": "npm install",
+    "build": "gulp"
+  },
+  "author": {
+    "name": "Vladimir Jovanović",
+    "email": "vladimir@bitersen.com",
+    "url": "https://www.bitersen.com"
+  },
+  "license": "GPL-3.0"
+}

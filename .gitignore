@@ -1,0 +1,21 @@
+######################
+# OS generated files #
+######################
+*/.DS_Store
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+#################
+# Project files #
+#################
+.sass-cache/*
+node_modules/*
+src/biticons/generated/**/*
+!src/biticons/generated/_biticons-glyphs.scss
+dist/*
