@@ -51,7 +51,7 @@ var fontName = 'biticons',
 
 // Header
 var fontBanner = ['/*!',
-  ' *  BitIcons are built with Bitframe v<%= pkg.version %>',
+  ' *  BitIcons v<%= pkg.version %> are part of Bitframe',
   ' * ',
   ' *  Build process created by <%= pkg.author.name %> <<%= pkg.author.email %>>',
   ' *  <%= pkg.author.url %>',
