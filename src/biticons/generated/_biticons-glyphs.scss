@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+// Unicode function to preserve formatting
+@function unicode($str) {
+  @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
+}
+
+// Include this file in your main SCSS file, so that you can extend icon names
+%icon {
+  font-family: "biticons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+  cursor: default;
+}
+
+@function icon-char($filename) {
+  $char: "";
+  
+    @if $filename == bitersen {
+        $char: unicode(E001);
+    }
+    @if $filename == vj {
+        $char: unicode(E002);
+    }
+  @return $char;
+}
+
+@mixin icon($filename, $insert: before) {
+  &:#{$insert} {
+    @extend %icon;
+    content: icon-char($filename);
+  }
+}
+
+// Icon Glyphs
+
+%icon-bitersen {
+  @include icon(bitersen);
+}
+
+%icon-vj {
+  @include icon(vj);
+}
+

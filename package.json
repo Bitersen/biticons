@@ -1,6 +1,6 @@
 {
   "name": "bitersen-biticons",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Bitersen Icon-font generator",
   "dependencies": {},
   "devDependencies": {
@@ -8,17 +8,17 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-header": "^1.8.9",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-iconfont": "^9.0.1",
+    "gulp-header": "^2.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-iconfont": "^9.1.0",
     "gulp-iconfont-css": "^2.1.0",
-    "gulp-plumber": "^1.1.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-plumber-notifier": "0.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-resolver": "^0.2.0",
     "gulp-sass": "^3.1.0",
-    "require-dir": "^0.3.2",
-    "run-sequence": "^2.1.0",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1",
     "time-stamp": "^2.0.0"
   },
   "repository": {
@@ -29,7 +29,6 @@
   "homepage": "https://github.com/Bitersen/biticons.git",
   "main": "gulpfile.js",
   "scripts": {
-    "install": "npm install",
     "build": "gulp"
   },
   "author": {
