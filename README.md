@@ -160,6 +160,5 @@ So what are the benefits?
 ---
 
 ## Author
-**Vladimir Jovanović** | Designer, Developer and Owner of [Bitersen](http://www.bitersen.com) agency
-
-[Twitter](https://twitter.com/vlasterx) | [Facebook](https://vx.rs/face) | [LinkedIn](http://vx.rs/linkedin) | [Medium](http://vx.rs/medium)
+Vladimir Jovanović
+[Bitersen](https://www.bitersen.com) | [Facebook](https://vx.rs/face) | [LinkedIn](http://vx.rs/linkedin) | [Medium blog](https://www.medium.com/bitersen) 
