@@ -161,4 +161,3 @@ So what are the benefits?
 
 ## Author
 Vladimir Jovanović
-[Bitersen](https://www.bitersen.com) | [Facebook](https://vx.rs/face) | [LinkedIn](http://vx.rs/linkedin) | [Medium blog](https://www.medium.com/bitersen) 
